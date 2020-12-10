@@ -28,16 +28,16 @@ func main() {
 	var numbers = make([]int, len(stringNums))
 
 	for i := range stringNums {
-		i := i
 		x, _ := strconv.Atoi(stringNums[i])
 		numbers = append(numbers, x)
 	}
 
-	for i := 0; i < len(numbers)-1; i++ {
-		i := i
-		for j := i + 1; j < len(numbers)-1; j++ {
-			if (numbers[i] + numbers[j]) == 2020 {
-				fmt.Printf("The answer is %d.", (i * j))
+	for i := 0; i < len(numbers)-3; i++ {
+		for j := i + 1; j < len(numbers)-2; j++ {
+			for k := j + 1; k < len(numbers)-1; k++ {
+				if (numbers[i] + numbers[j] + numbers[k]) == 2020 {
+					fmt.Printf("The answer is %d.", (numbers[i] * numbers[j] * numbers[k]))
+				}
 			}
 		}
 	}
