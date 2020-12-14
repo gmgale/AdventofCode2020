@@ -45,6 +45,13 @@ while EOF != True:
             for i in range(2, len(value)):
                 m.append(int(value[i]))
 
+
+        # Now apply Mask to Value and save to memory[address]
+
+
+        for i in range(len(value)):
+            for j in range(len(value)):
+
         
     
         
